@@ -47,7 +47,11 @@
                 </div>
               </div> <!-- row.// -->
               <hr />
-              <a href="./product-detail.html" class="btn btn-primary"><span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i></a>
+              {% if product.stock != 0 %}
+                <a href="./product-detail.html" class="btn btn-primary"><span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i></a>
+                {% else %}
+                <a href="./product-detail.html" class="btn btn-gray disabled"><span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i></a>
+              {% endif %}
             </article> <!-- product-info-aside .// -->
           </main> <!-- col.// -->
         </div> <!-- row.// -->
